@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms</title>
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<div class="container-principal">
+		<div class="container-left">
+			<div class="long-tit">
+				<h2>¿Quién descubrió América?</h2>
+			</div>	
+			<form action="/respuesta" method="post">		
+				<input type="hidden" name="param" value="1"/>	
+				<input type="text" id="res" name="res"/>
+				<input type="submit" value="Enviar"/>
+			</form>
+		</div>
+		<div class="container-right">
+			<div class="long-tit">
+				<h2>¿Capital de Portugal?</h2>
+			</div>			
+			<form action="/respuesta" method="post">		
+				<input type="hidden" name="param" value="2"/>	
+				<input type="text" id="res" name="res"/>
+				<input type="submit" value="Enviar"/>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
