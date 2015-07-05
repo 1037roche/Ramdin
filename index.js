@@ -1,18 +1,20 @@
 var express = require('express');
 var path    = require('path');
 var parser  = require('body-parser');
+//Esto es un cambio
+
+	alert("HOLA TIO");
+
 
 var app 	= express();
 	app.use(express.static(path.join(__dirname,'public')));
 	app.use(parser.urlencoded({extended:true}));
-
 	app.get('/preguntas', function(req , res){
 		//res.render('form', {'title' : 'First Swig Template'});
 		res.sendFile('form.html', {root:path.join(__dirname, '/public')});
 	});
 
-	app.post('/respuesta',function(req,res){
-		
+	app.post('/respuesta',function(req,res){		
 		var botonAtras = "<a href='/preguntas'>Atras</a>"
 		var respuesta = (req.body.res).trim();
 
